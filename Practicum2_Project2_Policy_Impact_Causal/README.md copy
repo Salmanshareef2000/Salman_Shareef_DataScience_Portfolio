@@ -1,2 +1,149 @@
-# Salman_Shareef_DataScience_Portfolio
-MS Applied Data Science Practicum Portfolio – Public Health &amp; Policy Analytics
+# 📘 Practicum 2 — Deep Learning for California Housing Price Prediction
+
+**Author:** Salman Shareef  
+**Practicum 2** 
+**Instructor:** Dr. Follis  
+
+---
+
+## 📌 Project Overview
+
+This practicum project develops and evaluates a **deep learning–based regression system** to predict **median housing prices in California** using socioeconomic and geographic census features.
+
+Four models were implemented and compared:
+
+- **Support Vector Regression (SVR)**
+- **k-Nearest Neighbors Regression (KNN)**
+- **Baseline Multilayer Perceptron (MLP)**
+- **Improved Multilayer Perceptron (BatchNorm + Dropout)**
+
+The **Baseline MLP achieved the best performance (R² ≈ 0.78)**, showing that deep learning effectively captures nonlinear housing market relationships.
+
+This project is suitable for:
+
+- Deep Learning final project  
+- Applied Practicum 2 submission  
+- GitHub portfolio showcase  
+
+---
+
+## 🧠 Business & Real-World Applications
+
+The predictive system can support:
+
+- **Real estate investors** – identify undervalued markets  
+- **Banks & lenders** – reduce mortgage underwriting risk  
+- **Urban planners** – detect housing demand & pressure zones  
+- **Affordable housing agencies** – monitor economic constraints  
+
+---
+
+## 📂 Repository Structure
+
+├── Practicum2_California_Housing.ipynb
+├── regression_results_california.csv
+├── feature_importances_extratrees.csv
+└── README.md
+
+
+---
+
+## 📊 Dataset Overview
+
+**Source:** Scikit-learn California Housing Dataset  
+**Size:** 20,640 rows × 9 columns  
+**Target Variable:** `MedHouseVal` (median home value in $100,000s)
+
+### **Features**
+- `MedInc` – Median income  
+- `HouseAge` – Median house age  
+- `AveRooms` – Average number of rooms  
+- `AveBedrms` – Average number of bedrooms  
+- `Population` – Block population  
+- `AveOccup` – Average household occupancy  
+- `Latitude`, `Longitude` – Geographic coordinates  
+
+---
+
+## ⚙️ Installation & Setup
+
+### **Install dependencies**
+
+```bash
+pip install numpy pandas matplotlib scikit-learn tensorflow
+
+If using Jupyter / Codespaces
+!pip install tensorflow
+
+How to Run the Project
+
+Open the notebook:
+
+Practicum2_California_Housing.ipynb
+
+Execute cells in order:
+Load dataset
+Perform EDA
+Train ML models (SVR, KNN)
+Train deep learning models
+Evaluate results
+Generate residual and feature importance plots
+All results and visuals appear inline.
+
+📈 Model Evaluation Metrics
+
+Models were compared using:
+R² – variance explained
+Adjusted R² – penalized complexity
+RMSE – root mean squared error
+MAE – mean absolute error
+
+Top model:
+Baseline MLP → R² ≈ 0.78
+This model balances complexity, generalization, and stability.
+
+🧪 Deep Learning Architecture
+Baseline MLP
+Dense(64, relu)
+Dense(64, relu)
+Dense(1)
+Optimizer: Adam
+Loss: MSE
+
+Improved MLP
+Dense(128, relu) → BatchNorm → Dropout(0.3)
+Dense(128, relu) → BatchNorm → Dropout(0.3)
+Dense(64, relu) → Dropout(0.2)
+Dense(1)
+
+🔍 Model Interpretability
+🔹 Residual Analysis
+Residuals centered around zero
+No major heteroscedasticity
+Indicates unbiased, stable predictions
+
+🔹 Feature Importance (ExtraTrees)
+Top predictors:
+Median income
+Latitude
+Longitude
+Room/bedroom averages
+Population / occupancy
+These reveal strong socioeconomic and geographic effects on price.
+
+⚠️ Limitations
+California Housing dataset is from 1990
+Lacks modern economic factors (crime, schools, zoning)
+Coordinates approximate spatial trends but don’t capture clusters
+Deep learning remains somewhat opaque without SHAP/LIME
+
+✅ Key Outcomes
+Neural networks outperform classical ML in predictive accuracy
+Baseline MLP emerges as the most reliable model
+EDA, modeling, evaluation, and interpretation fully implemented
+Project demonstrates readiness for real-world deployment
+
+👤 Author
+Salman Shareef
+Graduate Student – Applied Data Science
+University of St. Thomas (UST)

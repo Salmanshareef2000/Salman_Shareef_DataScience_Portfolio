@@ -1,2 +1,157 @@
-# Salman_Shareef_DataScience_Portfolio
-MS Applied Data Science Practicum Portfolio – Public Health &amp; Policy Analytics
+# Practicum 2 – Project 1  
+## Diabetes Risk Prediction, Fairness Analysis & Policy Simulation  
+**Salman Shareef | MS Applied Data Science**
+
+---
+
+## 📌 Project Overview
+
+This project applies machine learning to predict diabetes risk using U.S. public health survey data and evaluates the fairness and policy implications of these predictions. Beyond model performance, the project emphasizes:
+
+- Health equity analysis  
+- Algorithmic fairness  
+- High-risk population identification  
+- Public health policy simulation  
+
+The goal is to demonstrate how applied machine learning can inform **evidence-based public health policy and intervention design**.
+
+---
+
+## 📊 Dataset
+
+**Source:** Behavioral Risk Factor Surveillance System (BRFSS)  
+**Dataset:** Diabetes Health Indicators (2015)  
+**Size:** ~250,000 observations  
+**Features:** 22 behavioral, health, and socioeconomic variables  
+
+**Target Variable:**
+- `Diabetes_binary`
+  - `1` = Diagnosed diabetes  
+  - `0` = No diabetes  
+
+Key predictors include:
+- BMI  
+- High blood pressure  
+- Physical & mental health  
+- Physical activity  
+- Smoking & alcohol use  
+- Income  
+- Education  
+- Health care access  
+
+---
+
+## 🗂️ Project Structure
+
+Practicum2_Project1_Diabetes_ML/
+│
+├── notebooks/
+│ ├── 01_data_cleaning.ipynb # Data preprocessing & feature selection
+│ ├── 02_eda.ipynb # Exploratory analysis & health equity
+│ ├── 03_modeling.ipynb # ML training & performance comparison
+│ └── 04_fairness_policy.ipynb # Fairness audit & policy simulation
+│
+├── data/
+│ ├── raw/ # Kaggle dataset (ignored by GitHub)
+│ └── processed/
+│ ├── diabetes_clean_model_ready.csv
+│ ├── eda_summary_diabetes.csv
+│ └── policy_simulation_results.csv
+│
+├── models/
+│ ├── logistic_model.pkl
+│ ├── random_forest_model.pkl
+│ └── gradient_boosting_model.pkl
+│
+└── README.md # This file
+
+
+---
+
+## ⚙️ Methods & Models
+
+Three supervised learning models were trained and compared:
+
+1. **Logistic Regression** (baseline)
+2. **Random Forest**
+3. **Gradient Boosting** (final selected model)
+
+### Performance Metrics:
+- Accuracy  
+- ROC–AUC  
+- Precision, Recall, F1-score  
+- Feature importance  
+
+Gradient Boosting achieved the **highest ROC–AUC** and was used for the fairness and policy simulation analysis.
+
+---
+
+## 🔍 Fairness & Equity Analysis
+
+Model predictions were evaluated across:
+
+- **Sex**
+- **Income**
+
+Key findings:
+- Males exhibited higher predicted diabetes risk.
+- Diabetes risk declined steadily with increasing income.
+- Individuals with healthcare access showed higher observed risk due to **diagnosis detection bias**, not true increased disease prevalence.
+
+---
+
+## 🚀 Policy Simulation
+
+A hypothetical **BMI reduction intervention** was simulated:
+
+> A uniform 1-unit decrease in BMI across the population.
+
+Results demonstrated:
+- A measurable reduction in predicted diabetes risk
+- Larger benefits concentrated in lower-income populations
+- Evidence that behavioral interventions may reduce health inequities
+
+---
+
+## ✅ Key Deliverables
+
+- Clean machine-learning-ready dataset  
+- 4 fully documented Jupyter notebooks  
+- Trained predictive models  
+- Fairness audit by sex & income  
+- Public health policy impact simulation  
+- Processed summary datasets for reporting  
+
+---
+
+## 🧠 Skills Demonstrated
+
+- Supervised Machine Learning  
+- Feature Engineering  
+- Model Evaluation & ROC Analysis  
+- Health Equity & Fairness Auditing  
+- Policy Simulation with AI  
+- Reproducible Data Science Pipelines  
+
+---
+
+## 🏫 Academic Context
+
+**Course:** Practicum II – Master of Science in Applied Data Science  
+**Institution:** University of St. Thomas  
+**Student:** Salman Shareef  
+
+---
+
+## 📎 Notes
+
+- Large raw datasets are excluded using `.gitignore`
+- All results are reproducible using the provided notebooks
+- This project is designed for public health, ML engineering, and policy analytics audiences
+
+---
+
+## 📬 Contact
+
+**Salman Shareef**  
+GitHub: https://github.com/Salmanshareef2000

@@ -1,2 +1,107 @@
-# Salman_Shareef_DataScience_Portfolio
-MS Applied Data Science Practicum Portfolio – Public Health &amp; Policy Analytics
+# Mental Health Risk Detection Using Reddit NLP
+
+**Author:** Salman Shareef  
+**Program:** M.S. Applied Data Science  
+**Course:** Practicum I  
+**Institution:** University of St. Thomas  
+
+---
+
+## 📌 Project Overview
+
+This project applies Natural Language Processing (NLP) to large-scale Reddit mental health discussions to:
+
+- Measure emotional sentiment
+- Discover latent psychological themes using topic modeling
+- Detect high-risk distress signals indicating severe emotional vulnerability
+
+The goal is to demonstrate how computational text analytics can support digital mental health surveillance and public health policy.
+
+---
+
+## 📂 Project Structure
+
+Practicum1_Project2_MentalHealth_NLP/
+│
+├── data/ # Only small summary data (NO raw CSVs uploaded)
+├── notebooks/ # Notebook-based analysis pipeline
+├── report/ # Final written report (PDF / Word)
+└── README.md
+
+
+---
+
+## 🧪 Analysis Pipeline
+
+### ✅ Notebook 1 — Data Ingestion & Cleaning  
+- Streamed chunk processing (memory safe)
+- Removal of spam, empty, deleted posts
+- Text normalization & token filtering
+
+### ✅ Notebook 2 — Sentiment Analysis  
+- VADER polarity scoring
+- Disk-based streaming sentiment computation
+- Saved sentiment-enriched dataset
+
+### ✅ Notebook 3 — Topic Modeling (LDA)  
+- TF-IDF vectorization
+- Latent Dirichlet Allocation
+- Dominant psychological topic assignment
+
+### ✅ Notebook 4 — Mental Health Risk Detection  
+- High-risk keyword heuristic model
+- Negative sentiment risk flagging
+- Topic-level and time-based distress trend analysis
+
+---
+
+## 📊 Key Outputs
+
+- `summary_high_risk_by_topic.csv`
+- High-risk trend plots
+- Topic-specific distress rankings
+- Sentiment distribution visualizations
+
+---
+
+## ⚠️ Data Availability
+
+Due to GitHub file size limits, the raw Reddit dataset (`>500MB`) and processed row-level CSVs are **not included in this repository**.  
+They are generated locally using the notebooks.
+
+---
+
+## 📜 Ethical Disclaimer
+
+This project performs **probabilistic risk detection only** and is **not a clinical diagnostic tool**. All data are anonymized public Reddit posts. Results are intended solely for research and policy-level insights.
+
+---
+
+## ✅ Skills Demonstrated
+
+- Big Data NLP pipelines
+- Text cleaning & tokenization
+- Sentiment modeling
+- Topic modeling (LDA)
+- Digital public health analytics
+- Memory-safe chunk processing
+- Large-scale Git/GitHub project management
+
+---
+
+## 🧠 Policy Relevance
+
+This pipeline demonstrates how social media can be used as a complementary digital surveillance tool for:
+
+- Early detection of mental health crises  
+- Community-level psychological distress monitoring  
+- Targeted intervention strategies  
+
+---
+
+## ✅ Final Status
+
+✔ Practicum-Ready  
+✔ Master’s-Level NLP  
+✔ Public Health Analytics Focused  
+✔ Fully Reproducible Pipeline  
